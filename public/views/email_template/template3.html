@@ -1,0 +1,35 @@
+<table style="font-family:Verdana, Helvetica, sans-serif; color: {{fontcolor}}; background-color: {{signaturecolor}}; padding: 20px 40px; border-style: {{selectborderstyle}}; border-color: {{bordercolor}}; border-style: {{selectborderstyle}}; border-collapse: inherit;" cellpadding="0" cellspacing="0" >
+    <tbody>        
+        <tr>
+            <td style="font-size:{{signfontsize}}px; BORDER-TOP: #f87b00 1px solid; font-family: Arial; width: 402px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; vertical-align: top" valign="top" colspan="2">
+                <strong><span style="font-family: Arial; font-size: 11pt">{{customer_name}}</span></strong><br>
+                <span style="font-family: Arial; font-size:{{signfontsize}}px;">{{title}}<br></span>
+                <span style="font-family: Arial; font-size:{{signfontsize}}px;"> {{company}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family: Arial; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; vertical-align: top" valign="top" colspan="2">
+                <span style="font-family:Arial; font-size:{{signfontsize}}px;">{{addr_line1}}<br></span>
+                <span style="font-family:Arial; font-size:{{signfontsize}}px;">{{addr_line2}}<br></span>
+                <a style="text-decoration:none; font-family:Arial; font-size:{{signfontsize}}px;" href="http://{Web page}" target="_blank">
+                    <span style="color:black; font-family:Arial; font-size:{{signfontsize}}px;"> {{website_url}}</span>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family: Arial; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; vertical-align: top" valign="top">
+                <span style="font-family:Arial; font-size:{{signfontsize}}px;"><strong>m:</strong> {{mobile_phone}}<br></span>
+                <span style="font-family:Arial; font-size:{{signfontsize}}px;"><strong>t:</strong> {{phone}}<br></span>            
+            </td>
+            <td style="font-size:{{signfontsize}}px; font-family: Arial; PADDING-BOTTOM: 10px; LINE-HEIGHT: 0px; vertical-align: bottom; text-align: right;" valign="bottom" align="right">
+                <span data-ng-repeat="icon in initialIcons">
+                    <a href="{{icon.name}}" target="_blank" ng-show="icon.name">
+                        <img border="0" alt="{{icon.icon}} icon" 
+                        style="border:0; height:{{sizeicon}}; width:{{sizeicon}}" 
+                        src="{{public_path}}/images/social_icons/{{icon.icon}}.png">
+                    </a>
+                </span> 
+            </td>
+        </tr>        
+    </tbody>
+</table>

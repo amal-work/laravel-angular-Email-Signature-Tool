@@ -1,0 +1,10 @@
+<div class="icons-gallery dialog open">
+    <h3 class="bg-primary">Social Icons</h3>    
+    <div class="close-dialog" ng-click="close()">×</div>
+    <div class="icons-gallery-container" style="margin: 0 15px 20px 15px;">            
+        <div class="icon transition scale" ng-click="addIcon(icon)" ng-repeat ="icon in icons">
+            <img alt="icon for email signature" title="icon for email signature" 
+            src="../images/social_icons/{{icon.icon}}.png" style="height: 45px; width:45px; border-radius: 50%;">
+        </div>
+    </div>
+</div>

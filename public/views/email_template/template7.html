@@ -1,0 +1,46 @@
+<table style="font-family:Verdana, Helvetica, sans-serif; color: {{fontcolor}}; background-color: {{signaturecolor}}; padding: 20px 40px; border-style: {{selectborderstyle}}; border-color: {{bordercolor}}; border-style: {{selectborderstyle}}; border-collapse: inherit;" cellpadding="0" cellspacing="0" >
+    <tbody>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family:Arial; WIDTH:199px; PADDING-RIGHT:10px; vertical-align:top; text-align:center;" valign="top" rowspan="3" align="center">
+                <a href="{{logo_url}}" target="_blank">                                      
+                    <img ng-src="{{filepreview}}" 
+                    style="border-radius: {{photoshape}}; height:{{photosize}}px; width:{{photosize}}px; border:0; min-height: 30px; min-width: 30px;" border="0" 
+                    class="img-responsive" ng-show="filepreview"/>
+                </a>
+            </td>
+            <td style="font-size:18pt; font-family:Arial; WIDTH:326px; PADDING-BOTTOM:5px; PADDING-LEFT:10px; vertical-align:top;" valign="top">
+                <strong><span style="font-size:18pt; font-family:Arial; color:#006c2e">{{customer_name}}</span></strong><br>
+                <span style="font-family:Arial; font-size:{{signfontsize}}px; color:{{fontcolor}};">{{title}}</span>
+                <span style="font-family:Arial; font-size:{{signfontsize}}px; color:{{fontcolor}};"> • </span>
+                <span style="font-family:Arial; font-size:{{signfontsize}}px; color:{{fontcolor}};">{{company}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family:Arial; PADDING-BOTTOM:5px; PADDING-TOP:5px; PADDING-LEFT:10px; vertical-align:top;" valign="top">
+                <span style="font-size:{{signfontsize}}px; font-family:Arial;color:{{fontcolor}};">mobile. {{mobile_phone}}
+                <span style="font-size:{{signfontsize}}px; font-family:Arial;color:{{fontcolor}};">• </span>
+                </span>
+                <span style="font-size:{{signfontsize}}px; font-family:Arial;color:{{fontcolor}};"> phone. {{phone}}</span>
+                <br>            
+                <span style="font-size:{{signfontsize}}px; font-family:Arial;color:{{fontcolor}};">{{addr_line1}}<br></span>
+                <span style="font-size:{{signfontsize}}px; font-family:Arial;color:{{fontcolor}};">{{addr_line2}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family:Arial; PADDING-BOTTOM:10px; PADDING-TOP:5px; PADDING-LEFT:10px; vertical-align:middle;" valign="middle">
+                <span><strong><a href="http://{{website_url}}" target="_blank" style="font-size:{{signfontsize}}px; font-family:Arial; color:#2a2a2a;">{{website_url}}</a> </strong></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:{{signfontsize}}px; font-family:Arial; PADDING-BOTTOM:10px; PADDING-RIGHT:10px; vertical-align:middle; text-align:center;" valign="middle" align="center">
+               <span data-ng-repeat="icon in initialIcons">
+                    <a href="{{icon.name}}" target="_blank" ng-show="icon.name">
+                        <img border="0" alt="{{icon.icon}} icon" 
+                        style="border:0; height:{{sizeicon}}; width:{{sizeicon}}" 
+                        src="{{public_path}}/images/social_icons/{{icon.icon}}.png">
+                    </a>
+                </span>   
+            </td>
+        </tr>        
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+<table style="font-family:Verdana, Helvetica, sans-serif; color: {{fontcolor}}; background-color: {{signaturecolor}}; padding: 20px 40px; border-style: {{selectborderstyle}}; border-color: {{bordercolor}}; border-style: {{selectborderstyle}}; border-collapse: inherit;" cellpadding="0" cellspacing="0" >
+    <tr>
+        <td colspan="2" style="line-height: 25px; color: #977e6b; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #977e6b" height="25">
+            <span style="font-size:{{signfontsize}}px; font-weight: bold;">{{company}}</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="65%" valign="top" style="padding-top:20px; padding-bottom: 10px;">
+            <p style="font-size:{{signfontsize}}px; font-weight: bold; color:#454545; margin: 0px; margin-bottom: 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #ede7dd; padding-bottom: 10px;">{{customer_name}} <span style="font-weight: normal;">{{title}}</span>
+            </p>
+            <p style="font-size:{{signfontsize}}px;"> Mobile: {{mobile_phone}} | Phone: {{phone}}</p>
+            <p style="font-size:{{signfontsize}}px;"> {{website_url}}</p>
+        </td>
+        <td align="right">
+            <a href="{{logo_url}}" target="_blank">                                      
+                <img ng-src="{{filepreview}}" 
+                style="border-radius: {{photoshape}}; height:{{photosize}}px; width:{{photosize}}px; border:0; min-height: 30px; min-width: 30px;" border="0" 
+                class="img-responsive" ng-show="filepreview"/>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td style="font-family:Verdana; height:20px; vertical-align:middle; text-align:right;" valign="middle" align="right">
+            <span data-ng-repeat="icon in initialIcons">
+                <a href="{{icon.name}}" target="_blank" ng-show="icon.name">
+                    <img border="0" alt="{{icon.icon}} icon" 
+                    style="border:0; height:{{sizeicon}}; width:{{sizeicon}}" 
+                    src="{{public_path}}/images/social_icons/{{icon.icon}}.png">
+                </a>
+            </span>                                                                     
+        </td>
+    </tr>
+</table>

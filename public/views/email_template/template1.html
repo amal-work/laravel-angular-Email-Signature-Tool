@@ -1,0 +1,65 @@
+<table style="font-family:Verdana, Helvetica, sans-serif; color: {{fontcolor}}; background-color: {{signaturecolor}}; padding: 20px 40px; border-style: {{selectborderstyle}}; border-color: {{bordercolor}}; border-style: {{selectborderstyle}}; border-collapse: inherit;" cellpadding="0" cellspacing="0" >
+   <tbody>
+        <tr>
+            <td style="font-family:Verdana; border-right:2px solid #BD272D; padding-right:15px; text-align: right; vertical-align:top; " valign="top">
+                <table style="font-family:Verdana; margin-right:0; margin-left:auto;" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-family:Verdana; height:55px; vertical-align:top; text-align:right;" valign="top" align="right">
+                                <span style="font-family:Verdana; font-size:24px; font-weight:bold">{{customer_name}}
+                                <span><br></span></span>
+                                <span style="font-family:Verdana; font-size:{{signfontsize}}px;">{{title}}</span>|
+                                <span style="font-family:Verdana; font-size:{{signfontsize}}px;">{{company}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:Verdana; height:40px; vertical-align:top; padding:0; text-align:right;" valign="top" align="right">
+                                <span style="font-family:Verdana; font-size:{{signfontsize}}px;">phone: {{phone}}<span><br></span></span>
+                                <span style="font-family:Verdana; font-size:{{signfontsize}}px;">mobile: {{mobile_phone}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:Verdana; height:20px; vertical-align:middle; text-align:right;" valign="middle" align="right">
+                                <span data-ng-repeat="icon in initialIcons">
+                                    <a href="{{icon.name}}" target="_blank" ng-show="icon.name">
+                                        <img border="0" alt="{{icon.icon}} icon" 
+                                        style="border:0; height:{{sizeicon}}; width:{{sizeicon}}" 
+                                        src="{{public_path}}/images/social_icons/{{icon.icon}}.png">
+                                    </a>
+                                </span>                                                                     
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            <td style="padding-left:15px;font-size:1pt; vertical-align:top; font-family:Verdana;" valign="top">               
+                               
+                <table style="font-family:Verdana;" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="height:55px; font-family:Verdana; vertical-align:top;" valign="top">
+                                <a href="{{logo_url}}" target="_blank">                                      
+                                    <img ng-src="{{filepreview}}"   style="border-radius: {{photoshape}}; height:{{photosize}}px; 
+                                    width:{{photosize}}px; border:0; min-height: 30px; min-width: 30px;" border="0" 
+                                    class="img-responsive" ng-show="filepreview"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:40px; font-family:Verdana; vertical-align:top; padding:0;" valign="top">
+                                <span style="font-family:Verdana; font-size:10pt;">{{addr_line1}}<span><br>
+                                <span style="font-family:Verdana; font-size:10pt;">{{addr_line2}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:20px; font-family:Verdana; vertical-align:middle;" valign="middle">
+                                <a href="http://{{website_url}}" target="_blank" style="color:#BD272D; font-size:10pt; font-family:Verdana;">{{website_url}}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
